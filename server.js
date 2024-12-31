@@ -26,7 +26,7 @@ app.get("/api/countdown/:offset", async (req, res) => {
                     let hoursUntil2025 = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                     let minutesUntil2025 = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
                     let secondsUntil2025 = Math.floor((timeDiff % (1000 * 60)) / 1000);
-                    res.send(`The time until ${targetDate} for ${offsetStr} is ${padZero(daysUntil2025)}:${padZero(hoursUntil2025)}:${padZero(minutesUntil2025)}:${padZero(secondsUntil2025)}!`);
+                    res.send(`The time until 2025 for ${offsetStr} is ${padZero(daysUntil2025)}:${padZero(hoursUntil2025)}:${padZero(minutesUntil2025)}:${padZero(secondsUntil2025)}!`);
   } catch (error) {
     console.error(error);
     res.status(500).send("Failed to fetch information");
